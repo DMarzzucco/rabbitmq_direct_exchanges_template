@@ -1,25 +1,12 @@
 [package]
-authors = ["Jose Celano <josecelano@gmail.com>", "Cameron Garnham <me@da2ce7.com>"]
-description = "A Bencoded to JSON converter library and console app with no intermediary in-memory structure."
-edition = "2021"
-exclude = [".*", "cSpell.json", "rustfmt.toml"]
-license = "LGPL-3.0"
-name = "bencode2json"
-repository = "https://github.com/torrust/bencode2json"
+name = "rabbitmq_consummer_template"
 version = "0.1.0"
-
-[workspace]
-members = ["examples/*"]
+edition = "2021"
 
 [dependencies]
-clap = { version = "4.5", features = ["derive"] }
-derive_more = { version = "1.0", features = ["display"] }
-hex = "0.4"
-ringbuffer = { version = "0.15.0", features = ["alloc"] }
-serde_json = "1.0.128"
-thiserror = "1.0.64"
-
-[dev-dependencies]
-assert_cmd = "2.0"
-predicates = "3.1.2"
-tempfile = "3.13.0"
+futures-lite = "2.6.0"
+lapin = "=2.5.3"
+serde = "1.0.219"
+serde_json = "1.0.140"
+tokio = { version = "1.45.1", features = ["macros", "rt"] }
+tokio-amqp = "2.0.0"

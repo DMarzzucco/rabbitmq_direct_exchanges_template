@@ -1,4 +1,2 @@
-/.coverage
 /target
-be2json
-output.json
+Cargo.Lock
