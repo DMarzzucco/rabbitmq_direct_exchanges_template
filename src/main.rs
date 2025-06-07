@@ -24,7 +24,7 @@ async fn main() {
 
     channel
         .queue_declare(
-            "welcome_queue",
+            "queue_name",
             QueueDeclareOptions::default(),
             FieldTable::default(),
         )
@@ -33,8 +33,8 @@ async fn main() {
 
     let mut consumer = channel
         .basic_consume(
-            "welcome_queue",
-            "welcome_message_wroker",
+            "queue_name",
+            "template_example_wroker",
             BasicConsumeOptions::default(),
             FieldTable::default(),
         )
